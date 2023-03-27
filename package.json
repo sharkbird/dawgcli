@@ -6,6 +6,9 @@
   "scripts": {
     "test": "vitest"
   },
+"bin": {
+    "generateDawg": "./index.js"
+},
   "author": "sharkbird",
   "license": "MIT",
   "dependencies": {
