@@ -1,0 +1,15 @@
+{
+  "name": "dawgcli",
+  "version": "1.0.0",
+  "description": "tool to create packed representations of DAWG Tries as javascript modules",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "author": "sharkbird",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "commander": "^10.0.0"
+  }
+}

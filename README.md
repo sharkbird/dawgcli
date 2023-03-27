@@ -1,0 +1,1 @@
+takes in a text file containing words to add to the packed DAWG representation, and outputs a commonJS module that exports the packed version of the trie to use with PTrie from https://github.com/mckoss/dawg.
