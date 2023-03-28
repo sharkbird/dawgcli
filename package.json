@@ -6,13 +6,14 @@
   "scripts": {
     "test": "vitest"
   },
-"bin": {
+  "bin": {
     "generateDawg": "./index.js"
-},
+  },
   "author": "sharkbird",
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.2.0",
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "dawg-lookup": "^2.2.1"
   }
 }
