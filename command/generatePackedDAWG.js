@@ -7,20 +7,19 @@ const fs = require("fs");
 
 
 function generatePackedDAWG(fileName, moduleName) {
-    if (moduleName==="same") {
+    if (moduleName==='default') {
         moduleName=fileName.replace(/\.[^/.]+$/, "");
-    };
+    } else {
+        moduleName=`${moduleName}`;
+    }
     
     let words = fs.readFileSync(fileName).toString(); 
     const trie = new Trie(words);
     const packedTrie=trie.pack();
+    fs.writeFileSync(`${process.cwd()}/${moduleName}.js`,`data="${packedTrie}";module.exports = data`);
     
-    fs.writeFileSync(`${moduleName}.js`,`data="${packedTrie}";module.exports = data`);
     
     
-    //   const pTrie=new PTrie(data);
-    //   console.log(pTrie.isWord("cat")); 
-    //   console.log(process.cwd());
 }
 
-module.exports = generatePackedDAWG
+module.exports = generatePackedDAWG;
